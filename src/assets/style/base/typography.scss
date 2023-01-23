@@ -1,0 +1,89 @@
+.ui-title-1, .ui-title-2, .ui-title-3, .ui-title-4 {
+    display: block;
+    font-weight: normal;
+    color: $mainFontColor;
+    margin-bottom: .4em;
+    text-transform: uppercase;
+    font-family: $titleFont;
+    letter-spacing: 5px;
+}
+.ui-title-1 {
+  $localFontSize: 50px;
+  font-size: $localFontSize;
+  @media screen and (max-width: $smDesktopWidth) {
+    font-size: calc(#{$localFontSize} - 20%);
+  }
+  @media screen and (max-width: $tabletWidth) {
+    font-size: calc(#{$localFontSize} - 30%);
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: calc(#{$localFontSize} - 40%);
+  }
+}
+.ui-title-2 {
+  $localFontSize: 40px;
+  font-size: $localFontSize;
+  @media screen and (max-width: $smDesktopWidth) {
+    font-size: calc(#{$localFontSize} - 20%);
+  }
+  @media screen and (max-width: $tabletWidth) {
+    font-size: calc(#{$localFontSize} - 30%);
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: calc(#{$localFontSize} - 40%);
+  }
+}
+.ui-title-3 {
+  $localFontSize: 30px;
+  font-size: $localFontSize;
+  @media screen and (max-width: $smDesktopWidth) {
+    font-size: calc(#{$localFontSize} - 20%);
+  }
+  @media screen and (max-width: $tabletWidth) {
+    font-size: calc(#{$localFontSize} - 30%);
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: calc(#{$localFontSize} - 40%);
+  }
+}
+.ui-title-4 {
+  font-size: rem(24);
+  @media screen and (max-width: $smDesktopWidth) {
+    //font-size: #{font-size} - 20%;
+  }
+  @media screen and (max-width: $tabletWidth) {
+    //font-size: #{font-size} - 30%;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    //font-size: #{font-size} - 40%;
+  }
+}
+
+.ui-text-medium {
+  font-size: calcFluidFontSize(0.6, 0.9, 30, 80, rem);
+  color: $neutral-secondary;
+  letter-spacing: 3px;
+}
+.ui-text-regular {
+  font-size: calcFluidFontSize(0.5, 0.8, 30, 80, rem);
+  color: $neutral-regular;
+  letter-spacing: 2px;
+}
+.ui-text-small {
+  font-size: rem(16);
+  color: $neutral-regular;
+}
+.ui-text-smaller {
+  font-size: rem(10);
+  color: $neutral-regular;
+}
+.ui-text-hide {
+  color: $neutral-placeholder;
+}
+.font {
+  font-family: $titleFont;
+  text-transform: uppercase;
+}
+.pointer {
+  cursor: pointer;
+}

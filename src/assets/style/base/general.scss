@@ -1,0 +1,153 @@
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+	color: $mainFontColor;
+	-ms-overflow-style: none;
+  scrollbar-width: none;
+
+  @media screen and (max-width: $desktopWidth) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: $tabletWidth) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    font-size: 13px;
+  }
+}
+
+body {
+	font-family: $baseFont;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: $mainFontSize;
+	background-color: $default-color;
+	background-image: url(/assets/img/elements/bg.jpg);
+	background-repeat: repeat;
+	background-attachment: fixed;
+}
+a {
+	text-decoration: none;
+  color: $linkColor;
+}
+
+.divider {
+	position: relative;
+	display: block;
+	overflow: visible;
+	padding: 0;
+	margin: 5px auto;
+	color: $border-base;
+	font-size: 0.8rem;
+	font-family: 'Konkord-Retro';
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	&:before, &:after {
+		position: absolute;
+		content: "";
+		width: 45%;
+		height: 1px;
+		top: 50%;
+		background: rgba(255,255,255,.2);
+	}
+	&:before {
+		left: 0;
+	}
+	&:after {
+		right: 0;
+	}
+}
+section,
+.section {
+	position: relative;
+	padding: 54px 0;
+
+	@media screen and (max-width: $desktopWidth) {
+    padding: 36px 0;
+  }
+	@media screen and (max-width: $tabletWidth) {
+    padding: 22px 0;
+  }
+	@media screen and (max-width: $phoneWidth) {
+    padding: 16px 0;
+  }
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+  margin: 0 auto;
+}
+
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	transition: $mainTransition;
+	&.content-wrapper--fix-header {
+    padding-top: 80px;
+  }
+}
+
+.container {
+	width: 100%;
+	flex: 0 0 auto;
+	position: relative;
+	max-width: $desktopWidth;
+	margin: 0 auto;
+	padding: 0 rem(20);
+
+	@media screen and (max-width: $smDesktopWidth){
+		//max-width: $tabletWidth;
+		padding: 0 rem(20);
+		margin: 0 auto;
+  }
+	@media screen and (max-width: $tabletWidth){
+		max-width: $phoneWidth;
+		padding: 0 rem(16);
+		margin: 0 auto;
+  }
+	@media screen and (max-width: $phoneWidth) {
+		max-width: $smPhoneWidth;
+		padding: 0 rem(10);
+		margin: 0 auto;
+  }
+	&.container--small {
+		max-width: $tabletWidth;
+		@media screen and (max-width: $smDesktopWidth) {
+      max-width: $phoneWidth;
+    }
+  }
+}
+
+.container-fluid {
+	width: 100%;
+	padding: 0;
+	margin-right: auto;
+  margin-left: auto;
+}
+.container-padding {
+	padding: 20px 0;
+	margin-right: auto;
+  margin-left: auto;
+}
+.center {
+  text-align: center;
+}
+
+.st0 {
+	fill: $mainFontColor
+}
+.st1 {
+	fill: $default-color
+}
+.cursor_pointer {
+  cursor: pointer;
+}
